@@ -1,0 +1,416 @@
+<div>
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li><a href="javascript:;">Home</a></li>
+        <li><a ui-sref="app.dashboard.v2">Dashboard</a></li>
+        <li class="active">Investment</li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">Investment</small></h1>
+    <!-- end page-header -->
+<style type="text/css">
+            .customTD{
+                padding: 5px;
+                width: 45%;
+                text-align: right;
+            }
+            #wrapper {
+              width:155px;
+              clear:both;
+            }
+            #first {
+              width:25px;
+              float:left;
+            }
+            #second {
+              width:73px;
+              float:left;
+              margin-top: 5px;
+            }
+            #third {
+              width:55px;
+              float:left;
+            }
+            .panel-heading-btn{
+                text-align: center;
+            }
+        </style>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        Risk Meter
+                        <div id="wrapper">
+                          <div id="first">Low</div>
+                          <div id="second">
+                            <div style="width:70px;height:8px;border-radius:0px;" class="progress">
+                                <div style="width: 35%" class="progress-bar"></div>
+                                </div>
+                            </div>
+                          <div id="third">High</div>
+                        </div>
+                    </div>
+                    <h4 class="panel-title">Retirement <br> $139,862</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-12">
+                            <div class="row">
+                                <style type="text/css">
+                                    .sliderGreen .ui-slider-range, .progressGreen .ui-progressbar-value {
+                                        background: #36a9e1;
+                                    }
+
+                                    .slider {
+                                        background: #e4e6eb;
+                                        border: 0;
+                                        height: 20px;
+                                        -webkit-border-radius: 50em;
+                                        -moz-border-radius: 50em;
+                                        border-radius: 50em;
+                                        position: relative;
+                                        z-index: 10;
+                                        margin: 0 18px!important;
+                                    }
+                                    .ui-slider-horizontal .ui-slider-handle {
+                                        background: url("../img/handle.png") no-repeat center center scroll #fff!important;
+                                        background-position: 50% 50%;
+                                        background-size: 16px 16px!important;
+                                        width: 36px;
+                                        height: 26px;
+                                    }
+                                    #parent {
+                                      display: flex;
+                                    }
+                                    #narrow {
+                                      width: 200px;
+                                    }
+                                    #wide {
+                                      flex: 1;
+                                      padding-left: 100px;
+                                    }
+                                </style>
+                                <!-- begin col-9 -->
+                                <div class="col-md-12">
+                                <div id="parent">
+                                  <div id="wide">$90,793 - 65%</div>
+                                  <div id="narrow">$48,888 - 35%</div>
+                                </div>
+                                    <div class="slider sliderMin sliderGreen ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+                                        <div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 65.3505%;"></div>
+                                        <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 65.3505%;"></a>
+                                    </div>
+
+                                    <br><br>
+                                </div>
+                                <!-- end col-9 -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <div class="col-md-6">
+                           <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Holdings</th>
+                                        <th>Current Weight</th>
+                                        <th class="customTD">Current Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>US Total Stock Market</td>
+                                        <td >16.2%
+                                            <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                <div class="progress-bar" style="width: 80%"></div>
+                                            </div>
+                                        </td>
+                                        <td class="customTD">-$21.20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>US Total Stock Market</td>
+                                        <td>16.2%
+                                            <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                <div class="progress-bar" style="width: 60%"></div>
+                                            </div>
+                                        </td>
+                                        <td class="customTD">-$21.20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>US Total Stock Market</td>
+                                        <td>16.2%
+                                            <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                <div class="progress-bar" style="width: 40%"></div>
+                                            </div>
+                                        </td>
+                                        <td class="customTD">-$21.20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Holdings</th>
+                                        <th>Current Weight</th>
+                                        <th class="customTD">Current Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>US Total Stock Market</td>
+                                        <td>16.2%
+                                            <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                <div class="progress-bar" style="width: 80%"></div>
+                                            </div>
+                                        </td>
+                                        <td class="customTD">-$21.20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>US Total Stock Market</td>
+                                        <td>16.2%
+                                            <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                <div class="progress-bar" style="width: 60%"></div>
+                                            </div>
+                                        </td>
+                                        <td class="customTD">-$21.20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>US Total Stock Market</td>
+                                        <td>16.2%
+                                            <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                <div class="progress-bar" style="width: 40%"></div>
+                                            </div>
+                                        </td>
+                                        <td class="customTD">-$21.20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                         <p class="m-b-20" style="text-align:left;"><input type="checkbox" data-render="switchery" data-theme="default" checked="" data-switchery="true" style="display: none;">
+                                        <span class="switchery" style="border-color: rgb(0, 172, 172); box-shadow: rgb(0, 172, 172) 0px 0px 0px 16px inset; transition: border 0.5s, box-shadow 0.5s, background-color 1.5s; background-color: rgb(0, 172, 172);">
+                                        <small style="left: 20px; transition: left 0.25s;"></small></span> <a href="javascript:;'" >Alerts On</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        Risk Meter
+                        <div id="wrapper">
+                          <div id="first">Low</div>
+                          <div id="second">
+                            <div style="width:70px;height:8px;border-radius:0px;" class="progress">
+                                <div style="width: 35%" class="progress-bar"></div>
+                                </div>
+                            </div>
+                          <div id="third">High</div>
+                        </div>
+                    </div>
+                    <h4 class="panel-title">Bobby’s College Fund <br> $49,862</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-12">
+                                    <!-- begin row -->
+                                    <div class="row">
+                                         <div class="col-md-12">
+                                           <div class="slider sliderMin sliderGreen ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+                                        <div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 80.3505%;"></div>
+                                        <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 80.3505%;"></a>
+                                            </div>
+                                            <br><br>
+                                        </div>
+                                         <div class="col-md-12">
+                                       <table class="table table-condensed">
+                                            <thead>
+                                                <tr>
+                                                    <th>Holdings</th>
+                                                    <th>Current Weight</th>
+                                                    <th class="customTD">Current Value</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>US Total Stock Market</td>
+                                                    <td>
+                                                        16.2%
+                                                        <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                            <div class="progress-bar" style="width: 80%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="customTD">-$21.20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>US Total Stock Market</td>
+                                                    <td>16.2%
+                                                        <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                            <div class="progress-bar" style="width: 60%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="customTD">-$21.20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>US Total Stock Market</td>
+                                                    <td>16.2%
+                                                        <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                            <div class="progress-bar" style="width: 40%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="customTD">-$21.20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>US Total Stock Market</td>
+                                                    <td>16.2%
+                                                        <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                            <div class="progress-bar" style="width: 30%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="customTD">-$21.20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>US Total Stock Market</td>
+                                                    <td>16.2%
+                                                        <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                            <div class="progress-bar" style="width: 20%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="customTD">-$21.20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>US Total Stock Market</td>
+                                                    <td>16.2%
+                                                        <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                            <div class="progress-bar" style="width: 10%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="customTD">-$21.20</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                         <p class="m-b-20"><input type="checkbox" data-render="switchery" data-theme="default" checked="" data-switchery="true" style="display: none;">
+                                        <span class="switchery" style="border-color: rgb(0, 172, 172); box-shadow: rgb(0, 172, 172) 0px 0px 0px 16px inset; transition: border 0.5s, box-shadow 0.5s, background-color 1.5s; background-color: rgb(0, 172, 172);">
+                                        <small style="left: 20px; transition: left 0.25s;"></small></span> <a href="javascript:;'" >Alerts On</a> </p>
+                                    </div>
+
+                                    </div>
+                                    <!-- end row -->
+
+                                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        Risk Meter
+                        <div id="wrapper">
+                          <div id="first">Low</div>
+                          <div id="second">
+                            <div style="width:70px;height:8px;border-radius:0px;" class="progress">
+                                <div style="width: 35%" class="progress-bar"></div>
+                                </div>
+                            </div>
+                          <div id="third">High</div>
+                        </div>
+                    </div>
+                    <h4 class="panel-title">Vacation Time Fund <br> $9,862</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-12">
+                                    <!-- begin row -->
+                                    <div class="row">
+                                        <!-- begin col-9 -->
+                                        <div class="col-md-12">
+                                           <div class="slider sliderMin sliderGreen ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+                                        <div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 20.3505%;"></div>
+                                        <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 20.3505%;"></a>
+                                            </div>
+                                            <br><br>
+                                        </div>
+                                        <!-- end col-9 -->
+                                        <div class="col-md-12">
+                                        <table class="table table-condensed">
+                                            <thead>
+                                                <tr>
+                                                    <th>Holdings</th>
+                                                    <th>Current Weight</th>
+                                                    <th class="customTD">Current Value</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>US Total Stock Market</td>
+                                                    <td>
+                                                        16.2%
+                                                        <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                            <div class="progress-bar" style="width: 80%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="customTD">-$21.20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>US Total Stock Market</td>
+                                                    <td>16.2%
+                                                        <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                            <div class="progress-bar" style="width: 60%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="customTD">-$21.20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>US Total Stock Market</td>
+                                                    <td>16.2%
+                                                        <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                            <div class="progress-bar" style="width: 40%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="customTD">-$21.20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>US Total Stock Market</td>
+                                                    <td>16.2%
+                                                        <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                            <div class="progress-bar" style="width: 30%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="customTD">-$21.20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>US Total Stock Market</td>
+                                                    <td>16.2%
+                                                        <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                            <div class="progress-bar" style="width: 20%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="customTD">-$21.20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>US Total Stock Market</td>
+                                                    <td>16.2%
+                                                        <div class="progress" style="width:70px;height:8px;border-radius:0px;">
+                                                            <div class="progress-bar" style="width: 10%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="customTD">-$21.20</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p class="m-b-20"><input type="checkbox" data-render="switchery" data-theme="default" checked="" data-switchery="true" style="display: none;">
+                                        <span class="switchery" style="border-color: rgb(0, 172, 172); box-shadow: rgb(0, 172, 172) 0px 0px 0px 16px inset; transition: border 0.5s, box-shadow 0.5s, background-color 1.5s; background-color: rgb(0, 172, 172);">
+                                        <small style="left: 20px; transition: left 0.25s;"></small></span> <a href="javascript:;'" >Alerts On</a> </p>
+                                    </div>
+                                    <!-- end row -->
+
+                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

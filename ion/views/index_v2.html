@@ -1,0 +1,459 @@
+<div ng-controller="dashboardV2Controller">
+    <!-- begin breadcrumb -->
+    <ol class="breadcrumb pull-right">
+        <li><a href="javascript:;">Home</a></li>
+        <li class="active">Dashboard</li>
+        <li><a ui-sref="app.dashboard.investment">Investment</a></li>
+    </ol>
+    <!-- end breadcrumb -->
+    <!-- begin page-header -->
+    <h1 class="page-header">Account Dashboard</h1>
+    <!-- end page-header -->
+    <!-- 1st row -->
+    <div class="row">
+        <!-- begin col-6 -->
+        <div class="col-md-6">
+            <div class="widget widget-stats bg-blue">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-globe fa-fw"></i></div>
+                <div class="stats-title">Personal Accounts</div>
+                <div class="stats-number">$357,653</div>
+                <div class="stats-desc">Better than last year by (2.1%)</div>
+                <div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-6" style="border-right: 1px solid #999;">
+                                <div class="row">
+                                    <div class="col-xs-6 text-left">Savings</div>
+                                    <div class="col-xs-6 text-right">$184,596</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 text-left">Checking</div>
+                                    <div class="col-xs-6 text-right">$24,680</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 text-left">Visa Card</div>
+                                    <div class="col-xs-6 text-right">-$842</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-xs-6 text-left">401K</div>
+                                    <div class="col-xs-6 text-right">$76,892</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 text-left">ROTH IRA</div>
+                                    <div class="col-xs-6 text-right">$68,268</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 text-left">Mortgage</div>
+                                    <div class="col-xs-6 text-right">-$489,336</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end col-6 -->
+        <!-- begin col-6 -->
+        <div class="col-md-6 col-sm-6">
+            <div class="widget widget-stats bg-green">
+                <div class="stats-icon stats-icon-lg"><i class="fa fa-globe fa-fw"></i></div>
+                <div class="stats-title">Business Accounts</div>
+                <div class="stats-number">$857,653</div>
+                <div class="stats-desc">Better than last year by (2.1%)</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6" style="border-right: 1px solid #999;">
+                            <div class="row">
+                                <div class="col-xs-6 text-left">Savings</div>
+                                <div class="col-xs-6 text-right">$692,385</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6 text-left">Checking</div>
+                                <div class="col-xs-6 text-right">$89,312</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6 text-left">AMEX</div>
+                                <div class="col-xs-6 text-right">-$1,842</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-xs-6 text-left">Payroll</div>
+                                <div class="col-xs-6 text-right">$76,892</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6 text-left">Business Loan</div>
+                                <div class="col-xs-6 text-right">-$68,268</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end col-6 -->
+    </div>
+
+    <!-- 2nd row -->
+    <div class="row">
+        <!-- begin col-6 -->
+        <div class="col-md-6">
+            <!-- begin panel -->
+            <div class="panel panel-inverse">
+                <div class="panel-heading">
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-success btn-xs">Aug 2015 - Aug 2016</button>
+                        <button type="button" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Aug 2015 - Aug 2016</a></li>
+                            <li><a href="#">Aug 2014 - Aug 2015</a></li>
+                            <li><a href="#">Aug 2013 - Aug 2014</a></li>
+                        </ul>
+                    </div>
+                    <h4 class="panel-title">Business Income in $000.00</h4>
+                </div>
+                <div class="panel-body" ng-controller="chartMorrisController">
+                    <div id="morris-bar-chart" class="height-sm"></div>
+                </div>
+            </div>
+            <!-- end panel -->
+        </div>
+        <!-- end col-6 -->
+        <!-- begin col-6 -->
+        <div class="col-md-6">
+            <div class="widget-chart with-sidebar bg-black">
+                <div class="widget-chart-content">
+                    <h4 class="chart-title">
+                        Business Expenses
+                    </h4>
+                    <div class="morris-inverse" style="height: 260px;">
+                        <br/>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Payroll</td>
+                                    <td class="text-right">$36,892</td>
+                                </tr>
+                                <tr>
+                                    <td>Office Supplies</td>
+                                    <td class="text-right">$8,268</td>
+                                </tr>
+                                <tr>
+                                    <td>Rent</td>
+                                    <td class="text-right">$6,450</td>
+                                </tr>
+                                <tr>
+                                    <td>Others</td>
+                                    <td class="text-right">$367</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="widget-chart-sidebar bg-black-darker">
+                    <div class="chart-number">
+                        $51,767
+                    </div>
+                    <div id="expenses-donut-chart" style="height: 160px"></div>
+                    <ul class="chart-legend">
+                        <li><i class="fa fa-circle-o fa-fw  m-r-5" style="color: #0BA462"></i> 70.9% <span>Payroll</span></li>
+                        <li><i class="fa fa-circle-o fa-fw  m-r-5" style="color: #39B580"></i> 16.0% <span>Office Supplies</span></li>
+                        <li><i class="fa fa-circle-o fa-fw  m-r-5" style="color: #67C69D"></i> 12.5% <span>Rent</span></li>
+                        <li><i class="fa fa-circle-o fa-fw  m-r-5" style="color: #95D7BB"></i> 0.7% <span>Others</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end col-6 -->
+    </div>
+    <!-- end row -->
+        <div class="row">
+        <div class="col-md-3">
+            <!-- begin panel -->
+            <div class="panel panel-inverse">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        due on 7/21/16
+                    </div>
+                    <h4 class="panel-title">Visa Card - $841.92</h4>
+                </div>
+                <div class="panel-body">
+                   <div class="col-md-12" style="padding:0px;">
+                        <div class="row">
+                            <div class="col-xs-6 text-left">Home Depot</div>
+                            <div class="col-xs-6 text-right">-$21.20</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 text-left">07/07/2016</div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-6 text-left">Paypal</div>
+                            <div class="col-xs-6 text-right">-$87.50</div>
+                        </div>
+                         <div class="row">
+                            <div class="col-xs-6 text-left">07/07/2016</div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-6 text-left">iTunes</div>
+                            <div class="col-xs-6 text-right">-$8.00</div>
+                        </div>
+                         <div class="row">
+                            <div class="col-xs-6 text-left">07/07/2016</div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <!-- end panel -->
+        </div>
+        <div class="col-md-3">
+            <!-- begin panel -->
+            <div class="panel panel-inverse">
+                <div class="panel-heading">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        due on 7/21/16
+                    </div>
+                    <h4 class="panel-title">AMEX - $841.92</h4>
+                </div>
+                <div class="panel-body ">
+                    <div class="col-md-12" style="padding:0px;">
+                        <div class="row">
+                            <div class="col-xs-6 text-left">Home Depot</div>
+                            <div class="col-xs-6 text-right">-$21.20</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6 text-left">07/07/2016</div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-6 text-left">Paypal</div>
+                            <div class="col-xs-6 text-right">-$87.50</div>
+                        </div>
+                         <div class="row">
+                            <div class="col-xs-6 text-left">07/07/2016</div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-6 text-left">iTunes</div>
+                            <div class="col-xs-6 text-right">-$8.00</div>
+                        </div>
+                         <div class="row">
+                            <div class="col-xs-6 text-left">07/07/2016</div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <!-- end panel -->
+        </div>
+        <div class="col-md-3">
+            <!-- begin panel -->
+            <div class="panel panel-inverse">
+                <div class="panel-heading">
+                    <div class="media media-sm">
+                            <a class="media-left" href="javascript:;">
+                                <img src="assets/img/user-5.jpg" alt="" class="media-object rounded-corner" />
+                            </a>
+                            <div class="media-body ">
+                                <h4 class="panel-title">Anne Smith</h4>
+                                <p></p>
+                                <h6 class="panel-title"><span >Personal Advisor</span></h6>
+                            </div>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                </div>
+                <div class="panel-body">
+                    <p></p>
+                   <i class="glyphicon  glyphicon-earphone">   <span>323-867-5309</span></i>
+                   <p></p>
+                   <i class="glyphicon  glyphicon-earphone">   <span>anne.smith@bank.com</span></i>
+                   <p></p>
+                   <i class="glyphicon  glyphicon-earphone">   <span>Available to Chat Live</span></i>
+                   <p></p>
+                </div>
+            </div>
+            <!-- end panel -->
+        </div>
+         <div class="col-md-3">
+           <!-- begin panel -->
+            <div class="panel panel-inverse" data-sortable-id="form-stuff-2">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Quick Tranfer</h4>
+                </div>
+                <div class="panel-body">
+                    <input class="form-control" type="text" placeholder="$Enter amount" />
+                    <p></p>
+                    <select class="form-control">
+                        <option>Checking Account 074927</option>
+                    </select>
+                    <p></p>
+                       <select class="form-control">
+                        <option>Savings Account 094900</option>
+                    </select>
+                    <p></p>
+                    <button type="button" class="btn btn-success">Transfer</button>
+                </div>
+            </div>
+            <!-- end panel -->
+        </div>
+    </div>
+     <!-- 3rd row -->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel panel-inverse">
+                <div class="panel-heading bg-blue">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                    </div>
+                    <h4 class="panel-title">Personal Savings</h4>
+                    <span class="semi-bold">$184,595.67</span>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Business Loan Payment</td>
+                                <td class="customTD">-$2650.00</td>
+                            </tr>
+                            <tr>
+                                <td>Staples</td>
+                                <td class="customTD">-$1,222.45</td>
+                            </tr>
+                            <tr>
+                                <td>Deluxe Catering</td>
+                                <td class="customTD">-$859.99</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <p>
+                            <a href="javascript:;" class="btn btn-inverse btn-block"><i class="fa fa-list pull-right"></i> View Transactions</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-inverse">
+                <div class="panel-heading bg-blue">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                    </div>
+                    <h4 class="panel-title">Personal Checking</h4>
+                    <span class="semi-bold">$24,680.12</span>
+                </div>
+                <div class="panel-body">
+                <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Business Loan Payment</td>
+                                <td class="customTD">-$2650.00</td>
+                            </tr>
+                            <tr>
+                                <td>Staples</td>
+                                <td class="customTD">-$1,222.45</td>
+                            </tr>
+                            <tr>
+                                <td>Deluxe Catering</td>
+                                <td class="customTD">-$859.99</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <p>
+                            <a href="javascript:;" class="btn btn-inverse btn-block"><i class="fa fa-list pull-right"></i> View Transactions</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-inverse">
+                <div class="panel-heading bg-green">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                    </div>
+                    <h4 class="panel-title">Business Checking</h4>
+                    <span class="semi-bold">$89,312.22</span>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Business Loan Payment</td>
+                                <td class="customTD">-$2650.00</td>
+                            </tr>
+                            <tr>
+                                <td>Staples</td>
+                                <td class="customTD">-$1,222.45</td>
+                            </tr>
+                            <tr>
+                                <td>Deluxe Catering</td>
+                                <td class="customTD">-$859.99</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <p>
+                            <a href="javascript:;" class="btn btn-inverse btn-block"><i class="fa fa-list pull-right"></i> View Transactions</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-inverse">
+                <div class="panel-heading bg-green">
+                    <div class="panel-heading-btn">
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                        <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                    </div>
+                    <h4 class="panel-title">Business Savings</h4>
+                    <span class="semi-bold">$692,384.95</span>
+                </div>
+                <div class="panel-body">
+                <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Business Loan Payment</td>
+                                <td class="customTD">-$2650.00</td>
+                            </tr>
+                            <tr>
+                                <td>Staples</td>
+                                <td class="customTD">-$1,222.45</td>
+                            </tr>
+                            <tr>
+                                <td>Deluxe Catering</td>
+                                <td class="customTD">-$859.99</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <p>
+                            <a href="javascript:;" class="btn btn-inverse btn-block"><i class="fa fa-list pull-right"></i> View Transactions</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

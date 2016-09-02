@@ -1,0 +1,142 @@
+<style type="text/css">
+	.widget-welcome {
+		text-align: center;
+	}
+	.widget-welcome p{
+		font-size: 24px;
+		margin-bottom: 0;
+	}
+
+	.widget-welcome p.small-text {font-size: 16px; margin: 0 0 20px 0;}
+	.widget-welcome button{
+		margin: 30px 0;
+		font-size: 24px;
+		border: none;
+		padding: 5px 50px;
+	}
+
+	.widget-welcome a{
+		color: #929ba1;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.widget-welcome .carousel-indicators {
+		position: static;
+		width: 100%;
+		margin: 0;
+	}
+
+	.bank-widget .form-control {
+		display: inline;
+		background: none;
+		border: none;
+		border-bottom: 1px solid grey;
+	}
+	.age {width: 60px;}
+	.service-status {width: 200px;}
+	.income {width: 150px;}
+	.bank-widget {
+		display: none;
+	}
+	.bank-widget.active {
+		display: block;
+	}
+	.bank-widget .with-form-control, .bank-widget .with-form-control .form-control {
+		font-size: 26px;
+		color: black;
+	}
+	.bank-widget .with-form-control .form-control {
+		height: 50px;
+	}
+	.paginated-widgets .carousel-indicators {
+		margin: 0 0 30px 0;
+	}
+	.paginated-widgets .carousel-indicators li{
+		width: 20px;
+		height: 20px;
+		background: white;
+		border-radius: 20px;
+		border: 1px solid grey;
+	}
+	.paginated-widgets .carousel-indicators li.active {
+		background: grey;
+	}
+	.glyphicon{
+		line-height: 2;
+	}
+</style>
+<div ng-controller="widgetController">
+	<div class="p-40">
+		<div class="row">
+        	<!-- begin col-2 -->
+        	<div class="col-md-6 col-md-offset-3 widget-welcome">
+        		<div class="welcome-block" ng-hide="dismissWelcome">
+        			<h1>Welcome John Dover</h1>
+	        		<p>Your personal and business accounts are now in the same dashboard.</p>
+	        		<p>Your advisor Annie smith can help you at any point.</p>
+	        		<p>Let’s quickly setup your dashboard.</p>
+					<button type="submit" class="btn btn-primary btn-sm bg-black-lighter" ng-click="dismissWelcome = true">Get Started</button>
+					<p><a ui-sref="app.dashboard.v2">Skip this step ></a></p>
+        		</div>
+				<div class="paginated-widgets" ng-show="dismissWelcome">
+	        		<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" ng-class="{active: activeWidget === 'widget1'}" ng-click="activeWidget = 'widget1'"></li>
+						<li data-target="#myCarousel" data-slide-to="0" ng-class="{active: activeWidget === 'widget2'}" ng-click="activeWidget = 'widget2'"></li>
+					</ol>
+					<div class="widgets-inner">
+					    <div class="bank-widget" ng-class="{active: activeWidget === 'widget1'}">
+					        <h1>Creating a plan that works for you</h1>.
+					        <p>First we will need some quick info to suggest some goals</p>
+					        <p class="with-form-control">
+					        	I am <input value="42" type="text" class="form-control age" name="age" /> years old and
+						        <select class="form-control service-status">
+	                                <option>retired</option>
+	                                <option selected>not retired</option>
+	                            </select>
+                            </p>
+                            <p class="with-form-control">
+					        	My annual income is $ <input value="1,450,380" type="text" class="form-control income" name="income" />
+                            </p>
+                            <button type="submit" class="btn btn-primary btn-sm bg-black-lighter" ng-click="activeWidget = 'widget2'">Select My Goals</button>
+                            <p><a ng-click="activeWidget = 'widget2'">Skip this step ></a></p>
+					    </div>
+					    <div class="bank-widget" ng-class="{active: activeWidget === 'widget2'}">
+
+					        <div class="col-md-6 col-md-offset-3">
+					        	<h1>That’s it!</h1>
+					        	<p class="small-text">We're now ready to take you into the dashboard.</p>
+					            <!-- begin panel -->
+					            <div class="panel panel-inverse" style="width:270px;">
+					                <div class="panel-heading">
+					                    <div class="media media-sm">
+					                            <a class="media-left" href="javascript:;">
+					                                <img src="assets/img/user-5.jpg" alt="" class="media-object rounded-corner" />
+					                            </a>
+					                            <div class="media-body ">
+					                                <h4 class="panel-title">Anne Smith</h4>
+					                                <p></p>
+					                                <h6><span>Personal Advisor</span></h6>
+					                            </div>
+					                        </div>
+					                </div>
+					                <div class="panel-body">
+					                   <i class="glyphicon  glyphicon-earphone">   <big>323-867-5309</big></i>
+					                   <p></p>
+					                   <i class="glyphicon  glyphicon-earphone">   <big>anne.smith@bank.com</big></i>
+					                   <p></p>
+					                   <i class="glyphicon  glyphicon-earphone">   <big>Available to Chat Live</big></i>
+					                   <p></p>
+					                </div>
+					            </div>
+					            <p class="small-text">If you have any other questions, you can always contact your personal advisor.</p>
+					            <button type="submit" class="btn btn-primary btn-sm bg-black-lighter" ui-sref="app.dashboard.v2">Let's Do This!</button>
+					            <!-- end panel -->
+				        </div>
+					    </div>
+					 </div>
+	        	</div>
+        	</div>
+        </div>
+	</div>
+</div>
